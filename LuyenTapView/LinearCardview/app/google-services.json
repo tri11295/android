@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "143707985966",
+    "project_id": "linear-cardview",
+    "storage_bucket": "linear-cardview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143707985966:android:4249bf25f0188a239b27bf",
+        "android_client_info": {
+          "package_name": "com.ssv.linearcardview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143707985966-d9bvui7v7qt256n062fde7oqd4u57nmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4qXOq62McO_p0VBZBocuT_Z-w9oFH1JA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143707985966-d9bvui7v7qt256n062fde7oqd4u57nmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

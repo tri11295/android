@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ListView</string>
+    <string-array name="ListData">
+        <item>Bài 1 : Biến</item>
+        <item>Bài 2 : Kiểu dữ liệu</item>
+        <item>Bài 3 : Mảng</item>
+        <item>Bài 4 : OOP</item>
+    </string-array>
+</resources>
