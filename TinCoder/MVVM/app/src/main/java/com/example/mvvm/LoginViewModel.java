@@ -8,6 +8,7 @@ public class LoginViewModel extends BaseObservable {
 
     private String email;
     private String password;
+
     public ObservableField<String> messageLogin = new ObservableField<>();
     public ObservableField<Boolean> isShowMessage = new ObservableField<>();
     public ObservableField<Boolean> isSuccess = new ObservableField<>();

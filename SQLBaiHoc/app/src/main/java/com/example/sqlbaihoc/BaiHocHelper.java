@@ -13,14 +13,12 @@ public class BaiHocHelper extends SQLiteOpenHelper {
     }
 
     //Truy van ko tra ket qua
-
     public void QueryData(String sql){
         SQLiteDatabase database = getWritableDatabase();
         database.execSQL(sql);
     }
 
     //Truy van tra ket qua
-
     public Cursor GetData(String sql){
         SQLiteDatabase database = getReadableDatabase();
         return  database.rawQuery(sql,null);
