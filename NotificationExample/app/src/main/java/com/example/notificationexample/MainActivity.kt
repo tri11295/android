@@ -1,8 +1,6 @@
 package com.example.notificationexample
 
-import android.app.Notification.VISIBILITY_PUBLIC
 import android.app.PendingIntent
-import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -11,15 +9,14 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.RemoteViews
-import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import kotlinx.android.synthetic.main.activity_main.*
-import java.security.PublicKey
 import java.util.*
 
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     val CONTEND_TITLE_CHANEL_GAME = "Thông báo thông tin trò chơi"
@@ -30,17 +27,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnNotifiChannelGame.setOnClickListener(View.OnClickListener {
+        btnNotifiChannelGame.setOnClickListener{
             sendNotificationChanelGame()
-        })
+        }
 
-        btnNotifiChannelJob.setOnClickListener(View.OnClickListener {
+        btnNotifiChannelJob.setOnClickListener{
             sendNotificationChannelJob()
-        })
+        }
 
-        btnNotifiChannelMusic.setOnClickListener(View.OnClickListener {
+        btnNotifiChannelMusic.setOnClickListener{
             sendNotificationChannelMusic()
-        })
+        }
     }
 
     private fun sendNotificationChanelGame() {
@@ -51,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         val intentJob = Intent(this,MainActivity::class.java)
         val  contendIntent = PendingIntent.getActivity(this,0, intentJob,0)
 
-        val notification = NotificationCompat.Builder(this)
+        val notification = NotificationCompat.Builder(this,MyApplication.CHANNEL_ID_GAME())
                 .setContentTitle(CONTEND_TITLE_CHANEL_GAME)
                 .setContentText(CONTENT_NOTIFICATION_CHANEL_GAME)
                 .setSmallIcon(R.drawable.ic_baseline_videogame_asset_24)
@@ -61,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 .setColor(resources.getColor(R.color.red))
                 .setAutoCancel(true)
                 .setContentIntent(contendIntent)
-//                .setSound(uri)
+                .setSound(uri)
                 .build()
 
         val notificationManagerCompat = NotificationManagerCompat.from(this)

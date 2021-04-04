@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity(),ConnectInterface {
                 super.onScrolled(recyclerView, dx, dy)
 
                 val linearLayoutManager = recyclerView.layoutManager as LinearLayoutManager?
+
                 if (!isLoading) {
                     if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == listBattle.size - 1) {
                         connectPresenter.loadMore(this@MainActivity, listBattle, battleAdapter, responseArray)

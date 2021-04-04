@@ -64,7 +64,7 @@ class ConnectPresenter(private var connectInterFace: ConnectInterface) {
             val url = URL(urlApi)
 
             //creating connection
-            conn = url.openConnection() as HttpURLConnection
+            val conn = url.openConnection()
 
             //converting response into String
             val inputString = InputStreamReader(conn.inputStream)
